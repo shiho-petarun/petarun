@@ -24,6 +24,29 @@ ol {
 }
 
 /* ==========================
+   Variables
+========================== */
+:root {
+  /* Color */
+  --blue: #6f879b;
+  --blue-dark: #5f788c;
+  --text: #4d4d4d;
+  --line: rgba(111, 135, 155, 0.45);
+  --bg: #ffffff;
+
+  /* Font */
+  --font-ja: "Noto Sans JP", sans-serif;
+  --font-en: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Width */
+  --content-width: 1200px;
+
+  /* Header */
+  --header-height: 86px;
+}
+
+
+/* ==========================
    Base
 ========================== */
 :root {
@@ -57,7 +80,7 @@ body {
    Common
 ========================== */
 .section {
-  padding: 120px 0;
+  padding: 120px 0 80px 0;
 }
 
 .section__inner {
@@ -84,9 +107,9 @@ body {
 .section__lead {
   margin-bottom: 64px;
   color: var(--muted);
-  font-size: 1.9rem;
-  font-weight: 700;
-  line-height: 2;
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1.8;
 }
 
 /* ==========================
@@ -212,34 +235,48 @@ body {
 /* ==========================
    About
 ========================== */
+.section__en {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  color: var(--blue);
+}
+
 .about__inner {
   display: grid;
   grid-template-columns: 1fr 420px;
-  gap: 92px;
+  gap: 84px;
   align-items: start;
 }
 
 .about__text {
-  margin-top: 64px;
+  margin-top: 58px;
   font-size: 1.35rem;
-  line-height: 2.2;
+  line-height: 2.35;
 }
 
 .about__text p + p {
-  margin-top: 44px;
+  margin-top: 38px;
 }
 
 .small-copy {
-  margin-top: 160px;
+  margin-top: 148px;
   font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
+  line-height: 1.5;
   letter-spacing: 0.12em;
 }
 
+.about__image {
+  width: 100%;
+}
+
 .about__image img {
-  aspect-ratio: 420 / 560;
+  width: 100%;
+  height: 730px;
   object-fit: cover;
-  background: #f4f4f4;
+  display: block;
 }
 
 /* ==========================
@@ -281,10 +318,11 @@ body {
 
 .works-card__circle h3 {
   margin-bottom: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 2rem;
+  font-weight: 500;
   line-height: 1.25;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
 }
 
 .works-card__circle p {
@@ -297,11 +335,12 @@ body {
   display: block;
   margin-top: 12px;
   text-align: right;
-  color: var(--muted);
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  transition: transform 0.3s ease;
+  color: var(--blue);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  transition: all .35s ease;
 }
 
 .works-card:hover .works-card__visual {
@@ -313,7 +352,16 @@ body {
 }
 
 .works-card:hover .works-card__link {
-  transform: translateX(6px);
+  transform: translateX(8px);
+}
+
+.works-card__arrow {
+  display: inline-block;
+  transition: transform .35s ease;
+}
+
+.works-card:hover .works-card__arrow {
+  transform: translateX(8px);
 }
 
 .experience {
@@ -368,21 +416,69 @@ body {
   line-height: 2.25;
 }
 
-.contact__link {
+.contact-button-wrap {
   display: inline-block;
-  margin-top: 58px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--blue);
-  color: var(--blue);
-  font-family: "Poppins", sans-serif;
-  font-size: 3rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  transition: transform 0.3s ease;
+  margin-top: 40px;
+  padding: 1px;
+  background-color: var(--blue);
+  clip-path: polygon(0 0, 88% 0, 100% 100%, 0 100%);
 }
 
-.contact__link:hover {
-  transform: translateX(8px);
+.contact-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 218px;
+  height: 54px;
+  overflow: hidden;
+  color: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.12em;
+  background-color: var(--blue);
+  clip-path: polygon(0 0, 88% 0, 100% 100%, 0 100%);
+  transition: color 0.4s ease;
+}
+
+.contact-button::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  content: "";
+  transform: translateX(-101%);
+  transition: transform 0.4s ease;
+}
+
+.contact-button span {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-button__arrow {
+  transition: transform 0.4s ease;
+}
+
+.contact-button:hover {
+  color: var(--blue);
+}
+
+.contact-button:hover::before {
+  transform: translateX(0);
+}
+
+.contact-button:hover .contact-button__arrow {
+  transform: translateX(6px);
+}
+
+.contact-button__arrow {
+  transition:
+    transform 0.35s ease 0.08s,
+    color 0.35s ease;
 }
 
 /* ==========================
@@ -401,13 +497,22 @@ body {
   padding: 78px 0 88px;
 }
 
-.footer__logo .logo__mark,
-.footer__logo .logo__text {
-  color: #ffffff;
+.footer .logo {
+  display: inline-block;
+}
+
+.footer .logo__mark {
+  display: block;
+  width: 180px;
+  height: auto;
+}
+
+.footer__content {
+  margin-left: 4.5em;
 }
 
 .footer__copy {
-  margin: 22px 0 34px;
+  margin: 0px 0 23px;
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   letter-spacing: 0.18em;
@@ -416,7 +521,7 @@ body {
 .footer__nav {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 7px;
   width: fit-content;
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
@@ -431,7 +536,7 @@ body {
 }
 
 .copyright {
-  margin-top: 42px;
+  margin-top: 25px;
   opacity: 0.75;
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
