@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>お問い合わせ｜Petarun</title>
+
+    <meta
+      name="description"
+      content="Petarunへのデザイン制作・Web制作などのご相談はこちらから。ご依頼内容がまだ決まっていない段階でも、お気軽にお問い合わせください。"
+    />
+
+    <!-- OGP -->
+    <meta property="og:site_name" content="Petarun" />
+    <meta property="og:title" content="お問い合わせ｜Petarun" />
+    <meta
+      property="og:description"
+      content="Petarunへのデザイン制作・Web制作などのご相談はこちらから。ご依頼内容がまだ決まっていない段階でも、お気軽にお問い合わせください。"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- 公開時に正式URLへ変更 -->
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <meta property="og:locale" content="ja_JP" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- =========================
+       Header
+  ========================== -->
+    <header class="header">
+      <div class="header__inner">
+        <a class="logo" href="index.html" aria-label="Petarun トップページへ">
+          <img src="assets/logo/logo_01.svg" alt="Petarun" />
+        </a>
+
+        <nav class="nav" aria-label="グローバルナビゲーション">
+          <a href="index.html#about">About</a>
+          <a href="works.html">Works</a>
+          <a href="index.html#flow">Flow</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <button
+          class="menu-button"
+          type="button"
+          aria-label="メニューを開く"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span class="menu-button__line"></span>
+          <span class="menu-button__line"></span>
+          <span class="menu-button__line"></span>
+        </button>
+      </div>
+
+      <nav
+        class="mobile-menu"
+        id="mobile-menu"
+        aria-label="スマートフォン用ナビゲーション"
+      >
+        <a href="index.html#about">About</a>
+        <a href="works.html">Works</a>
+        <a href="index.html#flow">Flow</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- =========================
+       Main
+  ========================== -->
+    <main>
+      <!-- =========================
+       Contact Hero
+  ========================== -->
+      <section class="contact-hero">
+        <div class="contact-hero__inner">
+          <p class="contact-hero__label">Contact</p>
+
+          <h1 class="contact-hero__title">お問い合わせ</h1>
+
+          <div class="contact-hero__text">
+            <p>
+              まだご依頼内容が決まっていない段階でも大丈夫です。<br />
+              「こんなことはお願いできる？」「何から相談すればいいかわからない」といったことも、<br
+                class="pc-break"
+              />
+              まずは気軽にお聞かせください。
+            </p>
+
+            <p>内容を伺いながら、目的に合う形を一緒に整理していきます。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+       Contact Form
+  ========================== -->
+      <section class="contact-form">
+        <div class="contact-form__inner">
+          <!--Formspreeを使用してフォームを送信-->
+          <form
+            class="contact-form__form"
+            id="contact-form"
+            action="https://formspree.io/f/xppajjez"
+            method="POST"
+            novalidate
+          >
+            <!-- お名前 -->
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="name">
+                お名前
+                <span class="contact-form__required"> 必須 </span>
+              </label>
+
+              <!-- お名前 -->
+              <input
+                class="contact-form__input"
+                type="text"
+                id="name"
+                name="お名前"
+                autocomplete="name"
+                placeholder="例：山田 花子"
+                required
+                aria-describedby="name-error"
+              />
+
+              <p
+                class="contact-form__error"
+                id="name-error"
+                aria-live="polite"
+              ></p>
+            </div>
+
+            <!-- 会社名・屋号 -->
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="company">
+                会社名・屋号
+                <span class="contact-form__optional"> 任意 </span>
+              </label>
+
+              <input
+                class="contact-form__input"
+                type="text"
+                id="company"
+                name="会社名・屋号"
+                autocomplete="organization"
+              />
+            </div>
+
+            <!-- メールアドレス -->
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="email">
+                メールアドレス
+                <span class="contact-form__required"> 必須 </span>
+              </label>
+
+              <input
+                class="contact-form__input"
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                inputmode="email"
+                placeholder="例：example@example.com"
+                required
+                aria-describedby="email-error"
+              />
+
+              <p
+                class="contact-form__error"
+                id="email-error"
+                aria-live="polite"
+              ></p>
+            </div>
+
+            <!-- ご相談の種類 -->
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="category">
+                ご相談の種類
+                <span class="contact-form__required"> 必須 </span>
+              </label>
+
+              <select
+                class="contact-form__select"
+                id="category"
+                name="ご相談の種類"
+                required
+                aria-describedby="category-error"
+              >
+                <option value="">選択してください</option>
+
+                <option value="グラフィックデザイン">
+                  グラフィックデザイン
+                </option>
+
+                <option value="ロゴ・ブランディング">
+                  ロゴ・ブランディング
+                </option>
+
+                <option value="Webデザイン">Webデザイン</option>
+
+                <option value="紙とWebをまとめて相談したい">
+                  紙とWebをまとめて相談したい
+                </option>
+
+                <option value="その他">その他</option>
+
+                <option value="まだ決まっていない">まだ決まっていない</option>
+              </select>
+
+              <p
+                class="contact-form__error"
+                id="category-error"
+                aria-live="polite"
+              ></p>
+            </div>
+
+            <!-- ご相談内容 -->
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="message">
+                ご相談内容
+                <span class="contact-form__required"> 必須 </span>
+              </label>
+
+              <p class="contact-form__help" id="message-help">
+                決まっている範囲で大丈夫です。作りたいもの、お悩み、目的など、自由にお書きください。
+              </p>
+
+              <div class="contact-form__example">
+                <p>＜記入例＞</p>
+
+                <p>
+                  「新しくお店を始めるので、ロゴとショップカードについて相談したいです。」
+                </p>
+
+                <p>
+                  「何を作ればいいかまだ決まっていませんが、今の見せ方を整理したいです。」
+                </p>
+              </div>
+
+              <textarea
+                class="contact-form__textarea"
+                id="message"
+                name="ご相談内容"
+                rows="8"
+                required
+                aria-describedby="message-help message-error"
+              ></textarea>
+
+              <p
+                class="contact-form__error"
+                id="message-error"
+                aria-live="polite"
+              ></p>
+            </div>
+
+            <!-- ご希望の時期 -->
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="schedule">
+                ご希望の時期
+                <span class="contact-form__optional"> 任意 </span>
+              </label>
+
+              <select
+                class="contact-form__select"
+                id="schedule"
+                name="ご希望の時期"
+              >
+                <option value="">選択してください</option>
+
+                <option value="1か月以内">1か月以内</option>
+
+                <option value="2〜3か月以内">2〜3か月以内</option>
+
+                <option value="3か月以降">3か月以降</option>
+
+                <option value="特に決まっていない">特に決まっていない</option>
+
+                <option value="相談して決めたい">相談して決めたい</option>
+              </select>
+            </div>
+
+            <!-- ご予算 -->
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="budget">
+                ご予算
+                <span class="contact-form__optional"> 任意 </span>
+              </label>
+
+              <p class="contact-form__help" id="budget-help">
+                現時点で分かる範囲で大丈夫です。
+              </p>
+
+              <select
+                class="contact-form__select"
+                id="budget"
+                name="ご予算"
+                aria-describedby="budget-help"
+              >
+                <option value="">選択してください</option>
+
+                <option value="〜5万円">〜5万円</option>
+
+                <option value="5〜10万円">5〜10万円</option>
+
+                <option value="10〜30万円">10〜30万円</option>
+
+                <option value="30万円以上">30万円以上</option>
+
+                <option value="まだ決まっていない">まだ決まっていない</option>
+
+                <option value="相談して決めたい">相談して決めたい</option>
+              </select>
+            </div>
+
+            <!-- プライバシーポリシー -->
+            <div class="contact-form__privacy">
+              <label class="contact-form__checkbox-label">
+                <input
+                  class="contact-form__checkbox"
+                  type="checkbox"
+                  id="privacy"
+                  name="プライバシーポリシー"
+                  value="同意する"
+                  required
+                  aria-describedby="privacy-error"
+                />
+
+                <span>
+                  <a class="contact-form__privacy-link" href="privacy.html">
+                    プライバシーポリシー
+                  </a>
+                  に同意する
+                  <span class="contact-form__required"> 必須 </span>
+                </span>
+              </label>
+
+              <p
+                class="contact-form__error"
+                id="privacy-error"
+                aria-live="polite"
+              ></p>
+            </div>
+
+            <!-- 送信ボタン -->
+            <div class="contact-form__submit">
+              <button class="contact-form__button" type="submit">
+                <span class="contact-form__button-text">
+                  相談内容を送信する
+                </span>
+
+                <span aria-hidden="true"> → </span>
+              </button>
+            </div>
+
+            <input
+              type="hidden"
+              name="subject"
+              value="【Petarun】お問い合わせがありました"
+            />
+
+            <!-- 送信状態 -->
+            <div
+              class="contact-form__status"
+              id="contact-form-status"
+              role="status"
+              aria-live="polite"
+            ></div>
+
+            <!-- 返信目安 -->
+            <p class="contact-form__reply">
+              お問い合わせ内容を確認後、3〜5営業日以内を目安に返信します。
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__left">
+          <a
+            href="index.html"
+            class="footer__logo-link"
+            aria-label="Petarun トップページへ"
+          >
+            <img
+              class="footer__logo"
+              src="assets/logo/logo_w.svg"
+              alt="Petarun"
+            />
+          </a>
+
+          <p class="footer__copy">Design opens the future.</p>
+
+          <nav class="footer__nav" aria-label="フッターナビゲーション">
+            <a href="index.html#about">About</a>
+            <a href="works.html">Works</a>
+            <a href="index.html#flow">Flow</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy.html">Privacy Policy</a>
+          </nav>
+        </div>
+
+        <div class="footer__message">
+          <p class="footer__message-main">デザインが創る、未来への一歩。</p>
+
+          <p class="footer__message-sub">人と想いをつなぐデザインを。</p>
+        </div>
+
+        <div class="footer__bottom">
+          <p class="copyright">© 2026 Petarun. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,190 +1,328 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Petarun｜デザインが創る未来への一歩</title>
-  <meta name="description" content="Petarun（ペタルン）は、新しい始まりや希望、無限の可能性や豊かさを示す花びら（ペタル）の花言葉からスタートしたデザイン事務所です。ご納得いただけるデザインをお届けし可能性の開花をお手伝いいたします。">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<!-- OGP -->
-<meta property="og:site_name" content="Petarun｜デザインが創る未来への一歩" />
-<meta property="og:title" content="Petarun｜デザインが創る未来への一歩">
-<meta property="og:description" content="Petarun（ペタルン）は、新しい始まりや希望、無限の可能性や豊かさを示す花びら（ペタル）の花言葉からスタートしたデザイン事務所です。ご納得いただけるデザインをお届けし可能性の開花をお手伝いいたします。">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://demo.techacademy.jp/website-self-study/second/">
-<meta property="og:image" content="https://demo.techacademy.jp/website-self-study/second/images/main_1.jpg">
-<meta property="og:locale" content="ja_JP">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&amp;family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-</head>
+    <title>Petarun｜デザインが創る未来への一歩</title>
 
-<body>
-  <header class="header">
-    <div class="header__inner">
-      <a class="logo" href="#top" aria-label="Petarun トップへ">
-        <img src="assets/logo/logo_01.svg" alt="Petarun">
-      </a>
-      <nav class="nav" aria-label="グローバルナビゲーション">
-        <a href="#about">About</a>
-        <a href="#works">Works</a>
-        <a href="#flow">Flow</a>
-        <a href="#contact">Contact</a>
+    <meta
+      name="description"
+      content="Petarun（ペタルン）は、新しい始まりや希望、無限の可能性や豊かさを示す花びら（ペタル）の花言葉からスタートしたデザイン事務所です。ご納得いただけるデザインをお届けし可能性の開花をお手伝いいたします。"
+    />
+
+    <!-- OGP -->
+    <meta
+      property="og:site_name"
+      content="Petarun｜デザインが創る未来への一歩"
+    />
+    <meta property="og:title" content="Petarun｜デザインが創る未来への一歩" />
+    <meta
+      property="og:description"
+      content="Petarun（ペタルン）は、新しい始まりや希望、無限の可能性や豊かさを示す花びら（ペタル）の花言葉からスタートしたデザイン事務所です。ご納得いただけるデザインをお届けし可能性の開花をお手伝いいたします。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://公開ドメイン/" />
+    <meta
+      property="og:image"
+      content="https://公開ドメイン/assets/ogp/ogp.png"
+    />
+    <meta property="og:locale" content="ja_JP" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://公開ドメイン/" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&amp;family=Poppins:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <a class="logo" href="#top" aria-label="Petarun トップへ">
+          <img src="assets/logo/logo_01.svg" alt="Petarun" />
+        </a>
+        <nav class="nav" aria-label="グローバルナビゲーション">
+          <a href="index.html#about">About</a>
+          <a href="works.html">Works</a>
+          <a href="index.html#flow">Flow</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button
+          class="menu-button"
+          type="button"
+          aria-label="メニューを開く"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span class="menu-button__line"></span>
+          <span class="menu-button__line"></span>
+          <span class="menu-button__line"></span>
+        </button>
+      </div>
+
+      <nav
+        class="mobile-menu"
+        id="mobile-menu"
+        aria-label="スマートフォン用ナビゲーション"
+      >
+        <a href="index.html#about">About</a>
+        <a href="works.html">Works</a>
+        <a href="index.html#flow">Flow</a>
+        <a href="contact.html">Contact</a>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <main id="top">
-    <section class="hero section">
-      <p class="hero__label">Graphic Design / Web Design</p>
-      <h1 class="hero__title">人と想いをつなぐデザインを</h1>
-      <p class="hero__text">企業やブランドの価値を整理し、<br>伝わるデザインで未来への一歩を支えます。</p>
-      <a class="hero__button" href="#contact">お問い合わせはこちら →</a>
-    </section>
+    <main id="top">
+      <section class="hero section">
+        <p class="hero__label">Graphic Design / Web Design</p>
+        <h1 class="hero__title">
+          人と想いをつなぐ<br class="sp-break" />デザインを
+        </h1>
+        <p class="hero__text">
+          企業やブランドの価値を整理し、<br />伝わるデザインで未来への一歩を支えます。
+        </p>
+        <a class="hero__button" href="contact.html">お問い合わせはこちら →</a>
+        <div class="hero__scroll-arrow" aria-hidden="true"></div>
+      </section>
 
-    <section id="about" class="about section">
-      <div class="section__inner about__inner">
-        <div class="about__body">
-          <p class="section__en">About</p>
-          <h2 class="section__title">Petarun について</h2>
-          <p class="section__lead">企業やブランドの価値を整理し、<br>想いが伝わるかたちへ。</p>
-          <div class="about__text">
-            <p>デザインは、見た目を整えるだけではなく、<br>想いや価値を正しく伝えるための手段だと考えています。</p>
-            <p>Petarun は、企業やブランドの魅力を丁寧に整理し、<br>伝わるかたちへとデザインするデザイン事務所です。</p>
-            <p>グラフィックデザインと Web デザインの両方の視点から、<br>一つひとつの課題に向き合い、<br>長く信頼されるデザインをご提案します。</p>
+      <section id="about" class="about section">
+        <div class="section__inner about__inner">
+          <div class="about__body">
+            <p class="section__en">About</p>
+            <h2 class="section__title">Petarun について</h2>
+            <p class="section__lead">
+              企業やブランドの価値を整理し、<br />想いが伝わるかたちへ。
+            </p>
+            <div class="about__text">
+              <p>
+                デザインは、見た目を整えるだけではなく、<br />想いや価値を正しく伝えるための手段だと考えています。
+              </p>
+              <p>
+                Petarun は、企業やブランドの魅力を丁寧に整理し、<br />伝わるかたちへとデザインするデザイン事務所です。
+              </p>
+              <p>
+                グラフィックデザインと Web デザインの両方の視点から、<br
+                  class="pc-break"
+                />一つひとつの課題に向き合い、<br />長く信頼されるデザインをご提案します。
+              </p>
+            </div>
+            <p class="small-copy">Design opens the future.</p>
           </div>
-          <p class="small-copy">Design opens the future.</p>
+          <div class="about__image">
+            <img
+              src="assets/images/about.png"
+              alt="Petarunのデザイン制作風景"
+            />
+          </div>
         </div>
-        <div class="about__image">
-          <img src="assets/images/about.png" alt="Petarunのデザイン制作風景">
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="works" class="works section">
-      <div class="section__inner">
-        <p class="section__en">Works</p>
-        <h2 class="section__title">制作実績</h2>
-        <p class="section__lead">目的や課題に寄り添い、<br>グラフィック・Web デザインを制作しています。</p>
+      <section id="works" class="works section">
+        <div class="section__inner">
+          <p class="section__en">Works</p>
+          <h2 class="section__title">制作実績</h2>
+          <p class="section__lead">
+            目的や課題に寄り添い、<br />グラフィック・Web
+            デザインを制作しています。
+          </p>
+          <div class="works__grid">
+            <a class="works-card" href="works.html">
+              <div class="works-card__visual">
+                <img
+                  class="works-card__image"
+                  src="assets/images/works-card__link_01.png"
+                  alt="Webデザインの制作イメージ"
+                />
 
-        <div class="works__grid">
-          <a class="works-card" href="#">
-            <div class="works-card__visual">
-              <div class="works-card__circle">
-                <h3>Web<br>Design</h3>
-                <p>コーポレートサイト・LP・<br>レスポンシブ対応</p>
+                <div class="works-card__circle">
+                  <h3>Web<br />Design</h3>
+                  <p>
+                    コーポレートサイト・LP・<br />
+                    レスポンシブ対応
+                  </p>
+                </div>
               </div>
-            </div>
-            <span class="works-card__link">View More<span class="works-card__arrow">→</span>
-            </span>
-          </a>
-          <a class="works-card" href="#">
-            <div class="works-card__visual">
-              <div class="works-card__circle">
-                <h3>Graphic<br>Design</h3>
-                <p>パンフレット・ポスター・<br>販促ツール</p>
+
+              <span class="works-card__link">
+                View More<span class="works-card__arrow">→</span>
+              </span>
+            </a>
+
+            <a class="works-card" href="works.html">
+              <div class="works-card__visual">
+                <img
+                  class="works-card__image"
+                  src="assets/images/works-card__link_02.png"
+                  alt="パンフレットやポスターなどのグラフィックデザイン制作イメージ"
+                />
+
+                <div class="works-card__circle">
+                  <h3>Graphic<br />Design</h3>
+                  <p>
+                    パンフレット・ポスター・<br />
+                    販促ツール
+                  </p>
+                </div>
               </div>
-            </div>
-            <span class="works-card__link">View More<span class="works-card__arrow">→</span>
-            </span>
-          </a>
-          <a class="works-card" href="#">
-            <div class="works-card__visual">
-              <div class="works-card__circle">
-                <h3>Other<br>Design</h3>
-                <p>ロゴ・SNS・バナー制作</p>
+
+              <span class="works-card__link">
+                View More<span class="works-card__arrow">→</span>
+              </span>
+            </a>
+
+            <a class="works-card" href="works.html">
+              <div class="works-card__visual">
+                <img
+                  class="works-card__image"
+                  src="assets/images/works-card__link_03.png"
+                  alt="ロゴやSNS画像などのデザイン制作イメージ"
+                />
+
+                <div class="works-card__circle">
+                  <h3>SNS &<br />Banner</h3>
+                  <p>ロゴ・SNS・バナー制作</p>
+                </div>
               </div>
-            </div>
-            <span class="works-card__link">View More<span class="works-card__arrow">→</span>
-            </span>
+
+              <span class="works-card__link">
+                View More<span class="works-card__arrow">→</span>
+              </span>
+            </a>
+          </div>
+          <p class="experience">16+ Years Experience</p>
+        </div>
+      </section>
+
+      <section id="flow" class="flow section">
+        <div class="section__inner">
+          <p class="section__en">Flow</p>
+          <h2 class="section__title">制作の流れ</h2>
+          <p class="section__lead">
+            初めてのご依頼でも安心して進められるよう、<br />お問い合わせから納品まで丁寧にサポートいたします。
+          </p>
+
+          <ol class="flow__list">
+            <li class="flow__item">
+              <span>STEP 01</span>
+              <p>
+                <strong>お問い合わせ</strong>｜Web
+                サイトや印刷物など、まずはお気軽にご相談ください。ご相談内容を確認後、ご連絡いたします。
+              </p>
+            </li>
+            <li class="flow__item">
+              <span>STEP 02</span>
+              <p>
+                <strong>ヒアリング</strong
+                >｜ご要望や目的、ターゲット、ご予算などを丁寧にお伺いし、課題や目的を整理します。
+              </p>
+            </li>
+            <li class="flow__item">
+              <span>STEP 03</span>
+              <p>
+                <strong>ご提案・お見積り</strong
+                >｜ヒアリング内容をもとに、制作内容・スケジュール・お見積りをご提案いたします。
+              </p>
+            </li>
+            <li class="flow__item">
+              <span>STEP 04</span>
+              <p>
+                <strong>デザイン制作</strong
+                >｜内容をご確認いただきながら、一つひとつ丁寧にデザインを制作します。
+              </p>
+            </li>
+            <li class="flow__item">
+              <span>STEP 05</span>
+              <p>
+                <strong>修正・ご確認</strong
+                >｜完成したデザインをご確認いただき、必要に応じて修正を行います。
+              </p>
+            </li>
+            <li class="flow__item">
+              <span>STEP 06</span>
+              <p>
+                <strong>納品・公開</strong>｜データ納品、または Web
+                サイト公開まで責任を持って対応いたします。
+              </p>
+            </li>
+          </ol>
+          <p class="flow__note">
+            一つひとつのご依頼に丁寧に向き合い、安心してお任せいただける制作を心がけています。
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" class="contact section">
+        <div class="section__inner">
+          <p class="section__en">Contact</p>
+          <h2 class="section__title">お問い合わせ</h2>
+          <p class="section__lead">まずはお気軽にご相談ください。</p>
+          <div class="contact__text">
+            <p>Web サイト制作やグラフィックデザインなど、</p>
+            <p>ご相談・お見積りも承っております。</p>
+            <p>
+              「こんなこともお願いできるかな？」という段階でも、お気軽にお問い合わせください。
+            </p>
+          </div>
+          <div class="contact-button-wrap">
+            <a href="contact.html" class="contact-button">
+              <span>Contact</span>
+              <span class="contact-button__arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__left">
+          <a
+            href="index.html"
+            class="footer__logo-link"
+            aria-label="Petarun トップページへ"
+          >
+            <img
+              class="footer__logo"
+              src="assets/logo/logo_w.svg"
+              alt="Petarun"
+            />
           </a>
-        </div>
-        <p class="experience">16+ Years Experience</p>
-      </div>
-    </section>
 
-    <section id="flow" class="flow section">
-      <div class="section__inner">
-        <p class="section__en">Flow</p>
-        <h2 class="section__title">制作の流れ</h2>
-        <p class="section__lead">初めてのご依頼でも安心して進められるよう、<br>お問い合わせから納品まで丁寧にサポートいたします。</p>
-
-        <ol class="flow__list">
-          <li class="flow__item"><span>STEP 01</span><p><strong>お問い合わせ</strong>｜Web サイトや印刷物など、まずはお気軽にご相談ください。ご相談内容を確認後、ご連絡いたします。</p></li>
-          <li class="flow__item"><span>STEP 02</span><p><strong>ヒアリング</strong>｜ご要望や目的、ターゲット、ご予算などを丁寧にお伺いし、課題や目的を整理します。</p></li>
-          <li class="flow__item"><span>STEP 03</span><p><strong>ご提案・お見積り</strong>｜ヒアリング内容をもとに、制作内容・スケジュール・お見積りをご提案いたします。</p></li>
-          <li class="flow__item"><span>STEP 04</span><p><strong>デザイン制作</strong>｜内容をご確認いただきながら、一つひとつ丁寧にデザインを制作します。</p></li>
-          <li class="flow__item"><span>STEP 05</span><p><strong>修正・ご確認</strong>｜完成したデザインをご確認いただき、必要に応じて修正を行います。</p></li>
-          <li class="flow__item"><span>STEP 06</span><p><strong>納品・公開</strong>｜データ納品、または Web サイト公開まで責任を持って対応いたします。</p></li>
-        </ol>
-        <p class="flow__note">一つひとつのご依頼に丁寧に向き合い、安心してお任せいただける制作を心がけています。</p>
-      </div>
-    </section>
-
-    <section id="contact" class="contact section">
-      <div class="section__inner">
-        <p class="section__en">Contact</p>
-        <h2 class="section__title">お問い合わせ</h2>
-        <p class="section__lead">まずはお気軽にご相談ください。</p>
-        <div class="contact__text">
-          <p>Web サイト制作やグラフィックデザインなど、</p>
-          <p>ご相談・お見積りも承っております。</p>
-          <p>「こんなこともお願いできるかな？」という段階でも、お気軽にお問い合わせください。</p>
-        </div>
-        <div class="contact-button-wrap">
-          <a href="#contact-form" class="contact-button">
-            <span>Contact</span>
-            <span class="contact-button__arrow">→</span>
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer__inner">
-      <a href="#" class="logo">
-        <img class="footer__logo" src="assets/logo/logo_w.svg" alt="Petarun">
-      </a>
-      <nav class="footer__nav" aria-label="フッターナビゲーション">
-        <div class="footer__content">
           <p class="footer__copy">Design opens the future.</p>
-            <nav class="footer__nav" aria-label="フッターナビゲーション">
-            <a href="#about">About</a>
-            <a href="#works">Works</a>
-            <a href="#flow">Flow</a>
-            <a href="#contact">Contact</a>
+
+          <nav class="footer__nav" aria-label="フッターナビゲーション">
+            <a href="index.html#about">About</a>
+            <a href="works.html">Works</a>
+            <a href="index.html#flow">Flow</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy.html">Privacy Policy</a>
           </nav>
-        <p class="copyright">© 2026 Petarun</p>
         </div>
-      </nav>
-    </div>
-  </footer>
 
-  <script>
-  const viewportSize = document.createElement("div");
+        <div class="footer__message">
+          <p class="footer__message-main">デザインが創る、未来への一歩。</p>
 
-  viewportSize.style.position = "fixed";
-  viewportSize.style.left = "16px";
-  viewportSize.style.bottom = "16px";
-  viewportSize.style.zIndex = "9999";
-  viewportSize.style.padding = "8px 12px";
-  viewportSize.style.background = "rgba(0, 0, 0, 0.75)";
-  viewportSize.style.color = "#ffffff";
-  viewportSize.style.fontSize = "14px";
-  viewportSize.style.letterSpacing = "0";
-  viewportSize.style.borderRadius = "4px";
+          <p class="footer__message-sub">人と想いをつなぐデザインを。</p>
+        </div>
 
-  function updateViewportSize() {
-    viewportSize.textContent =
-      window.innerWidth + " × " + window.innerHeight;
-  }
+        <div class="footer__bottom">
+          <p class="copyright">© 2026 Petarun. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
 
-  document.body.appendChild(viewportSize);
-  updateViewportSize();
-  window.addEventListener("resize", updateViewportSize);
-</script>
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>
